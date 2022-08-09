@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/translate.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link rel="stylesheet" href="./assets/css/bodyContent.css" />
+    <title>
+      ZEE5 - Watch TV Shows, 100+ Originals, Movies, News & Live TV Online
+    </title>
+  </head>
+  <body>
+    <section id="NavBarSection"></section>
+    <div id="SliderWindowSection">
+      <div class="containerSlider">
+        <div class="slides">
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-3392/cover/1170x658withlogo44cd1d32edf8459b93868f30d0491454.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Bhagya Lakshmi</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Bhagya Lakshmi')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-366/cover/1170x658withlogoa91062da77c2420ca7b77eda29170e20.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Kundali Bhagya</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Kundali Bhagya')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5101301/cover/1170x658withlogoc9ce7f49bda1461289533132e2d7ae20.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Mithai</h2>
+              <div>
+                <button class="WatchBTN" onclick="saveToLocalPlay('Mithai')">
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-3510/cover/1170x658withlogo3d9524e7247c4c8abd598b7c604af7e3.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Meet</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Deep and Isha Get Married')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5155964/cover/1170x658withlogo9dc58714acd248efb0dd738b3f34dfc0.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>DID Super Moms 2022</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('DID Super Moms 2022')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="prev">❮</a>
+        <a class="next">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Tv Shows on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('Tv shows')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId3"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard3('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard3('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Movies on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('movie')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div class="cardbox_container" id="CardSlideId"></div>
+        <a class="prevForCard" onclick="slideCardBoard1('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard1('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Movies on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('Marvel')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId2"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard2('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard2('right')">❯</a>
+      </div>
+    </div>
+
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Web series on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('TV web series')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId4"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard4('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard4('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive bhojpuri on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('bhojpuri movie')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId5"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard5('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard5('right')">❯</a>
+      </div>
+    </div>
+    <section id="footer_top"></section>
+  </body>
+</html>
+<script src="./modules/navbar.js"></script>
+<script src="./modules/footer.js"></script>
+<script src="./assets/js/navbarfunction.js"></script>
+<script src="./assets/js/searchFunction.js"></script>
+<script src="./assets/js/slider.js"></script>
+<script src="./assets/js/bodyContent.js"></script>
+<script src="./assets/js/underline.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>

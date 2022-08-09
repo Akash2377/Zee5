@@ -1,0 +1,186 @@
+#More-Page-Content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#More-Page-Content-IMG {
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+#More-Page-Content > h1 {
+  margin: 50px 0;
+  color: white;
+}
+#More-Page-Content-IMG > div {
+  width: 210px;
+
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1%;
+  position: relative;
+  transition: 00.4s;
+  gap: 25px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#More-Page-Content-IMG > div > div {
+  position: absolute;
+  bottom: 0;
+  margin-top: 2px;
+  background-color: #0f0617da;
+  background-image: linear-gradient(
+    rgba(238, 226, 226, 0),
+    rgba(109, 99, 99, 0.466),
+    rgba(35, 15, 189, 0.651)
+  );
+
+  color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
+#More-Page-Content-IMG > div > div > button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+#More-Page-Content-IMG > div:hover {
+  transform: scale(1.12);
+  border: 9px solid #ffffff;
+  border-radius: 5px;
+  z-index: 1;
+}
+#More-Page-Content-IMG img {
+  width: 100%;
+  height: 100%;
+}
+#More-Page-Content-IMG > div > div > h4 {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 3px;
+}
+#More-Page-Content-IMG > div > div > p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(202, 186, 186);
+}
+#More-Page-Content-IMG > div > div > button {
+  width: 100px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: black;
+}
+
+@media all and (min-width: 381px) and (max-width: 900px) {
+  #More-Page-Content-IMG {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  #More-Page-Content-IMG > div {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+  }
+  #More-Page-Content {
+    width: 80%;
+  }
+  #sortingAndFilterMethods label {
+    font-size: 15px;
+  }
+  #sortingAndFilterMethods select {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 10px;
+    text-align: center;
+    background-color: #0f0617;
+    margin-top: -10px;
+  }
+  #sortingAndFilterMethods > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media all and (min-width: 50px) and (max-width: 380px) {
+  #More-Page-Content-IMG {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  #More-Page-Content-IMG > div {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+  }
+  #More-Page-Content {
+    width: 80%;
+    padding: 0;
+  }
+
+  #sortingAndFilterMethods label {
+    font-size: 15px;
+  }
+  #sortingAndFilterMethods select {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 10px;
+    text-align: center;
+    background-color: #0f0617;
+    margin-top: -10px;
+  }
+  #sortingAndFilterMethods > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+#sortingAndFilterMethods {
+  display: flex;
+  margin-bottom: 29px;
+  margin-top: -15px;
+}
+#sortingAndFilterMethods label {
+  font-size: 20px;
+}
+#sortingAndFilterMethods select {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #0f0617;
+  margin-top: -10px;
+  cursor: pointer;
+}
+#sortingAndFilterMethods select option {
+  cursor: pointer;
+}
+#sortingAndFilterMethods > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

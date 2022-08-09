@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>
+      Login to ZEE5 &amp; watch the Best Shows, Movies, News and More
+    </title>
+    <link rel="stylesheet" href="../../assets/css/login&Signup/signup.css" />
+  </head>
+  <body>
+    <section id="loginSectionAK">
+      <a href="../../index.html" id="returnHome">X</a>
+      <div id="loginDiv">
+        <div>Create a new account</div>
+        <div>
+          Create an account to continue enjoying uninterrupted video and
+          personalised experience
+        </div>
+        <div id="">
+          <button>
+            <img
+              src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.51.82"
+              alt=""
+            />
+            Sign in
+          </button>
+        </div>
+        <span class="orSpan">or</span>
+        <div class="fieldLoginInputPart">
+          <select id="countrySelectTagNumber">
+            <option value="ind">+91 India</option>
+            <option value="egy">+20 Egypt</option>
+            <option value="phil">+63 Phillipiens</option>
+            <option value="vit">+84 Vietnem</option>
+            <option value="ind">+92 Indonesia</option>
+          </select>
+          <input
+            type="text"
+            id="InputMobileOrEmialSignIn"
+            name="InputMobileOrEmialSignIn"
+            placeholder=" "
+          />
+          <label for="InputMobileOrEmialSignIn">Mobile Number</label>
+        </div>
+        <div id="otpDivInput" class="fieldLoginInputPart">
+          <input
+            type="password"
+            id="OTPofNumber"
+            name="OTPofNumber"
+            placeholder=" "
+          />
+
+          <label for="OTPofNumber">Enter OTP</label>
+          <div class="show">
+            <img
+              src="../../assets/img/eye-slash-solid.png"
+              alt="eye"
+              class="eye"
+              id="eye1"
+              onclick="myFunction()"
+            />
+          </div>
+        </div>
+
+        <span id="terms_conditionSignUp"
+          >By proceeding you agree to our
+          <a href="https://www.zee5.com/termsofuse">Terms of Services</a> &
+          <a href="https://www.zee5.com/privacypolicy">Privacy Policy.</a></span
+        >
+        <button id="LoginBTNUser" disabled><span>Send OTP</span></button>
+        <div id="gotoSignUpPage">
+          Already registered ? <a href="./login.html">Login</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="../../server/javascript/signup.js"></script>

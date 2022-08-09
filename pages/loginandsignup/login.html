@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>
+      Login to ZEE5 &amp; watch the Best Shows, Movies, News and More
+    </title>
+    <link rel="stylesheet" href="../../assets/css/login&Signup/login.css" />
+  </head>
+  <body>
+    <section id="loginSectionAK">
+      <a href="../../index.html" id="returnHome">X</a>
+      <div id="loginDiv">
+        <div>Login to ZEE5</div>
+        <div>
+          Login to continue enjoying uninterrupted video and personalised
+          experience.
+        </div>
+        <div>
+          <img
+            src="https://www.zee5.com/images/apple-social-icon-circle.svg?ver=2.52.22"
+            alt=""
+          />
+          <img
+            src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.52.22"
+            alt=""
+          />
+          <img
+            src="https://www.zee5.com/images/fb-social-icon-circle.svg?ver=2.52.22"
+            alt=""
+          />
+          <img
+            src="https://www.zee5.com/images/twitter-social-icon.svg?ver=2.52.22"
+            alt=""
+          />
+        </div>
+        <span class="orSpan">or</span>
+        <div class="fieldLoginInputPart">
+          <select id="countrySelectTagNumber">
+            <option value="ind">+91 India</option>
+            <option value="egy">+20 Egypt</option>
+            <option value="phil">+63 Phillipiens</option>
+            <option value="vit">+84 Vietnem</option>
+            <option value="ind">+92 Indonesia</option>
+          </select>
+          <input
+            type="text"
+            id="InputMobileOrEmialSignIn"
+            name="InputMobileOrEmialSignIn"
+            placeholder=" "
+          />
+
+          <label for="InputMobileOrEmialSignIn"
+            >Email ID Or Mobile Number</label
+          >
+        </div>
+        <div id="otpDivInput" class="fieldLoginInputPart">
+          <input
+            type="password"
+            id="OTPofNumber"
+            name="OTPofNumber"
+            placeholder=" "
+          />
+
+          <label for="OTPofNumber">Enter OTP</label>
+          <div class="show">
+            <img
+              src="../../assets/img/eye-slash-solid.png"
+              alt="eye"
+              class="eye"
+              id="eye1"
+              onclick="myFunction1()"
+            />
+          </div>
+        </div>
+        <div id="PasswordOnEmail" class="fieldLoginInputPart">
+          <input
+            type="password"
+            id="PasswordSignIn"
+            name="PasswordSignIn"
+            placeholder=" "
+          />
+
+          <label for="PasswordSignIn">Password</label>
+          <div class="show">
+            <img
+              src="../../assets/img/eye-slash-solid.png"
+              alt="eye"
+              id="eye2"
+              class="eye"
+              onclick="myFunction2()"
+            />
+          </div>
+        </div>
+        <span id="forgotPasID">Forgot Password?</span>
+        <button id="LoginBTNUser" disabled><span>Login</span></button>
+        <div id="gotoSignUpPage">
+          New to ZEE5 ? <a href="./signup.html">Register</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script src="../../server/javascript/login.js"></script>

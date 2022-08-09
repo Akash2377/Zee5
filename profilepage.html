@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+    <link rel="stylesheet" href="./assets/css/translate.css" />
+    <title>
+      ZEE5 - Watch TV Shows, 100+ Originals, Movies, News & Live TV Online
+    </title>
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/profilepage.css" />
+  </head>
+  <body>
+    <section id="NavBarSection"></section>
+    <section id="userProfileSection">
+      <div id="MainDivProfileContainer">
+        <div id="firstDivProfileContainer">
+          <button
+            onclick="noneAndBlock('userProfileSectionUnder','MyProfile')"
+            id="MyProfile"
+          >
+            My Profile
+          </button>
+          <button
+            onclick="noneAndBlock('userWatchList','MyWatchlist')"
+            id="MyWatchlist"
+          >
+            My Watchlist
+          </button>
+          <button
+            onclick="noneAndBlock('userSubscription','Subscription')"
+            id="Subscription"
+          >
+            My Subscription
+          </button>
+          <button
+            onclick="noneAndBlock('userRentals','MyRentals')"
+            id="MyRentals"
+          >
+            My Rentals
+          </button>
+          <button
+            onclick="noneAndBlock('userTransactions','MyTransation')"
+            id="MyTransation"
+          >
+            My Transaction
+          </button>
+        </div>
+        <div id="secondDivProfileContainer">
+          <section id="userProfileSectionUnder">
+            <div>
+              <h1>My Profile</h1>
+              <div>
+                <div><span id="UserProfileInitials">GU</span></div>
+                <div>
+                  <h1 id="userNameDisplay">Guest</h1>
+                  <p>
+                    +91<span id="userMobileNumberDisplay">8668458742 </span>
+                  </p>
+                  <button
+                    onclick="noneAndBlock('userProfileUpdate','MyProfile')"
+                  >
+                    Edit Profile
+                  </button>
+                </div>
+              </div>
+              <button
+                onclick="noneAndBlock('changePassword','MyProfile')"
+                id="changeItPass"
+              >
+                Change Password
+              </button>
+            </div>
+          </section>
+          <section id="userProfileUpdate">
+            <div>
+              <h1>Edit Profile</h1>
+              <div id="UpdateUserName" class="fieldPassWordChange">
+                <input
+                  type="text"
+                  id="NameUserUpdate"
+                  name="NameUserUpdate"
+                  placeholder=" "
+                />
+                <label for="NameUserUpdate">Your full name</label>
+              </div>
+              <div id="UpdateUserEmail" class="fieldPassWordChange">
+                <input
+                  type="email"
+                  id="emailUserUpdate"
+                  name="emailUserUpdate"
+                  placeholder=" "
+                />
+                <label for="emailUserUpdate">Enter Email</label>
+              </div>
+              <div id="UpdateUserNumber" class="fieldPassWordChange">
+                <input
+                  style="cursor: not-allowed"
+                  type="text"
+                  id="NumberUserUpdate"
+                  name="NumberUserUpdate"
+                  placeholder=" "
+                  disabled
+                  value="80"
+                />
+                <label for="NumberUserUpdate">Mobile Number</label>
+              </div>
+              <div id="updateDOB" class="fieldPassWordChange">
+                <input
+                  type="date"
+                  id="DOBUserUpdate"
+                  name="DOBUserUpdate"
+                  placeholder=" "
+                />
+                <label for="DOBUserUpdate">Date of Birth</label>
+              </div>
+
+              <div id="genderSelectTA">
+                <label>Select GENDER</label>
+                <select name="GenderSelector" id="selectGender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div id="ProfileUpdateBtnContainer">
+                <button
+                  onclick="noneAndBlock('userProfileSectionUnder','MyProfile')"
+                >
+                  Go Back
+                </button>
+                <button
+                  id="UpdateJsonProfileUser"
+                  onclick="UpdateUserProfileInJson()"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section id="changePassword">
+            <div>
+              <h1>My Profile</h1>
+              <h1>Change Password</h1>
+              <div id="NewPassWord" class="fieldPassWordChange">
+                <input
+                  type="password"
+                  id="NewPasswordCheck"
+                  name="NewPasswordCheck"
+                  placeholder=" "
+                  minlength="8"
+                />
+
+                <label for="NewPasswordCheck">New Password</label>
+                <div class="show">
+                  <img
+                    src="./assets/img/eye-slash-solid.png"
+                    alt="eye"
+                    id="eye1"
+                    class="eye"
+                    onclick="myFunction1()"
+                  />
+                </div>
+              </div>
+              <div id="NewPassWordConfirm" class="fieldPassWordChange">
+                <input
+                  type="password"
+                  id="newPassConfirmIn"
+                  name="newPassConfirmIn"
+                  placeholder=" "
+                  minlength="8"
+                />
+
+                <label for="newPassConfirmIn">Confirm New Password</label>
+                <div class="show">
+                  <img
+                    src="./assets/img/eye-slash-solid.png"
+                    alt="eye"
+                    id="eye2"
+                    class="eye"
+                    onclick="myFunction2()"
+                  />
+                </div>
+              </div>
+              <div id="passUpdatebtnContainer">
+                <button
+                  onclick="noneAndBlock('userProfileSectionUnder','MyProfile')"
+                >
+                  Go Back
+                </button>
+                <button
+                  disabled
+                  id="updateUserPassBTN"
+                  onclick="updatePasswordInJson()"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+          </section>
+          <section id="userWatchList">
+            <div>
+              <h1>My Watchlist</h1>
+              <div id="imgOfERRORmyWatchlist" class="displeyErrorIMG">
+                <img src="./assets/img/myWatchVideos.png" alt="" />
+              </div>
+              <div id="MyWatchListDisplay" class="displeyErrorIMG">
+                <div id="appendWatchList"></div>
+              </div>
+            </div>
+          </section>
+          <section id="userSubscription">
+            <div>
+              <h1>My Subscription</h1>
+              <div id="imgOfERRORmySubsription" class="displeyErrorIMG">
+                <img src="./assets/img/Mysubscriptions.png" alt="" />
+                <img src="./assets/img/mysubsriptiontext.png" alt="" />
+              </div>
+              <div id="RentalsPurchased499" class="displeyErrorIMG">
+                <div>
+                  <div>
+                    <i id="crownOfKing" class="fas fa-crown"></i>
+                    <div>
+                      <h3>Premium</h3>
+                      <p>Premium-3 Months</p>
+                    </div>
+                  </div>
+                  <div id="PriceDivTOP">&#8377;499</div>
+                </div>
+              </div>
+              <!--  exp-->
+              <div id="informationDiv">
+                <h2>Watch Ad-Free With Premium</h2>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> 2800+
+                  <span>Blockbuster Movies</span
+                  ><i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>150+
+                  <span>Web Series</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> Live TV,
+                  <span>Before TV</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>
+                  Offer:<span>Extra 10% OFF on Cards</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>Watch on
+                  Mobile, TV, Laptop
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> Complete
+                  <span>Learning Module </span>For Students
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+              </div>
+
+              <!--  exp-->
+              <div id="RentalsPurchased699" class="displeyErrorIMG">
+                <div>
+                  <div>
+                    <i id="crownOfKing" class="fas fa-crown"></i>
+                    <div>
+                      <h3>Premium</h3>
+                      <p>Premium-12 Months</p>
+                    </div>
+                  </div>
+                  <div id="PriceDivTOP">&#8377;699</div>
+                </div>
+              </div>
+              <!--  exp-->
+              <div id="informationDiv2">
+                <h2>Watch Ad-Free With Premium</h2>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> 2800+
+                  <span>Blockbuster Movies</span
+                  ><i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>150+
+                  <span>Web Series</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> Live TV,
+                  <span>Before TV</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>
+                  Offer:<span>Extra 10% OFF on Cards</span>
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+                <p>
+                  <span style="color: palevioletred">&#10004;</span>Watch on
+                  Mobile, TV, Laptop
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+
+                <p>
+                  <span style="color: palevioletred">&#10004;</span> Complete
+                  <span>Learning Module </span>For Students
+                  <i class="fa-regular fa-circle-question"></i>
+                </p>
+              </div>
+
+              <!--  exp-->
+            </div>
+          </section>
+          <section id="userRentals">
+            <div>
+              <h1>My Rentals</h1>
+              <div id="imgOfERRORmyRentals" class="displeyErrorIMG">
+                <img src="./assets/img/myrentals.png" alt="" />
+              </div>
+            </div>
+          </section>
+          <section id="userTransactions">
+            <div>
+              <h1>My Transactions</h1>
+              <div id="imgOfERRORmyTransactions" class="displeyErrorIMG">
+                <img src="./assets/img/mytransactions.png" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section id="footer_top"></section>
+  </body>
+</html>
+<script src="./modules/navbar.js"></script>
+<script src="./modules/footer.js"></script>
+<script src="./assets/js/navbarfunction.js"></script>
+<script src="./assets/js/searchFunction.js"></script>
+<script src="./assets/js/profilepage.js"></script>
+<script src="./assets/js/underline.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>

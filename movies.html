@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link rel="stylesheet" href="./assets/css/bodyContent.css" />
+    <link rel="stylesheet" href="./assets/css/translate.css" />
+    <title>
+      ZEE5 - Watch TV Shows, 100+ Originals, Movies, News & Live TV Online
+    </title>
+  </head>
+  <body>
+    <section id="NavBarSection"></section>
+    <div id="SliderWindowSection">
+      <div class="containerSlider">
+        <div class="slides">
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-101-10z5145273/cover/1170x6582df54c70231d46be821e840ee96314a4.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>RRR</h2>
+              <div>
+                <button class="WatchBTN" onclick="saveToLocalPlay('RRR')">
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z51324/cover/1170x658withlogode50e97586d744e496e338341f3efc43.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Golmaal Returns</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Golmaal Returns')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/cover/1170x658withlogo7d3b23a5bbeb483298901769ba1e97bbc476769c441e472e8dba231d9f96ece7.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Attack: part1</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Attack: part1')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133622/cover/1170x658withlogof994f29250bc49d1b5c4b7d8df4454803b1854ad776d49be880c19d6b0411f77.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Jhund</h2>
+              <div>
+                <button class="WatchBTN" onclick="saveToLocalPlay('Jhund')">
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5177236/cover/1170x658withlogo920b86993e4448f6bd5e836d20107c1d.jpg"
+              alt=""
+            />
+            <div class="textandbutton">
+              <h2>Janhit mein jaari</h2>
+              <div>
+                <button
+                  class="WatchBTN"
+                  onclick="saveToLocalPlay('Janhit mein jaari')"
+                >
+                  <i class="fa-solid fa-play"></i>WATCH
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="prev">❮</a>
+        <a class="next">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Movies on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('movie')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div class="cardbox_container" id="CardSlideId"></div>
+        <a class="prevForCard" onclick="slideCardBoard1('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard1('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Movies on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('Marvel')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId2"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard2('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard2('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Tv Shows on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('Tv shows')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId3"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard3('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard3('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive Web series on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('TV web series')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId4"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard4('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard4('right')">❯</a>
+      </div>
+    </div>
+    <div class="movie-list-wrapper">
+      <div class="containerbox">
+        <div class="heading_top">
+          <h3>Exclusive bhojpuri on ZEE5</h3>
+          <a onclick="showMoreResultsMovie('bhojpuri movie')"
+            >More <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+        <div
+          class="cardbox_container cardbox_container1"
+          id="CardSlideId5"
+        ></div>
+        <a class="prevForCard" onclick="slideCardBoard5('left')">❮</a>
+        <a class="nextForCard" onclick="slideCardBoard5('right')">❯</a>
+      </div>
+    </div>
+    <section id="footer_top"></section>
+  </body>
+</html>
+<script src="./modules/navbar.js"></script>
+<script src="./modules/footer.js"></script>
+<script src="./assets/js/navbarfunction.js"></script>
+<script src="./assets/js/searchFunction.js"></script>
+<script src="./assets/js/slider.js"></script>
+<script src="./assets/js/bodyContent.js"></script>
+<script src="./assets/js/underline.js"></script>
+<script src="./assets/js/translate.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>

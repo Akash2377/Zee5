@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <!-- -------------fav icon---- -->
+    <link rel="icon" href="./ZEE5_logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- -------------------font Awesome Link------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="NavBarOfPaymentSection">
+      <a href="./index.html" class="topLogo"
+        ><img
+          src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.50.94"
+          id="logo"
+          title="Zee5logo"
+          alt="Zee% lOgo"
+          width="60px"
+      /></a>
+      <p id="ParaOfuserStatus">
+        <i class="fa-solid fa-user"></i>Welcome <span id="NameOfUser"></span>
+      </p>
+    </div>
+    <section id="paymentsection">
+      <div>
+        <p>Step 2 of 3</p>
+        <h1>Make Payment</h1>
+      </div>
+      <div>
+        <div>
+          <i id="crownOfKing" class="fas fa-crown"></i>
+          <div>
+            <h3>Premium</h3>
+            <p>Premium- <span id="totalMonth">12</span> Months</p>
+          </div>
+        </div>
+        <div id="PriceDivTOP">&#8377;<span id="PriceOfContent"></span></div>
+      </div>
+      <div>
+        <div id="paymentCarddiv">
+          <p>Enter Credit / Debit Card Details</p>
+          <div id="form">
+            <label for=""> Enter Card Number</label>
+            <input
+              type="text"
+              id="cardnumber"
+              placeholder="Enter Card Number"
+              required="required"
+              minlength="16"
+              maxlength="16"
+            />
+            <label for=""> Expiry Date</label>
+            <input
+              type="date"
+              placeholder="Enter Expiry Date"
+              id="ExpiryDate"
+              required="required"
+            />
+            <label for=""> CVV</label>
+            <input
+              type="text"
+              id="Cvv"
+              placeholder="Enter CVV"
+              minlength="3"
+              maxlength="3"
+              required="required"
+            /><br />
+            <input
+              type="text"
+              id="OtpOfPayment"
+              maxlength="4"
+              minlength="4"
+              placeholder="Enter OTP"
+              required="required"
+            /><br />
+            <button id="btn">Proceed To Pay</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="foot">
+      <div>
+        Copyright © 2022 Zee Entertainment Enterprises Ltd. All rights reserved.
+      </div>
+      <div>
+        <div>
+          <a href="./about.html">
+            <pre>
+About Us  |
+            </pre>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <pre>
+Help Center  |
+            </pre>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <pre>
+Privacy Policy |
+            </pre>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <pre>
+  Terms of Use
+            </pre>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./assets/js/payment.js"></script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.51.82"
+      class="jsx-397bb7cff0cecce7"
+    />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/paymentsuccessful.css" />
+    <script
+      src="https://kit.fontawesome.com/584aebd994.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="orderConfirmation">
+      <img
+        id="paymentSIMG"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYM6J1SiVyLhKRlgI2o3xvIommY10joOSRQw&usqp=CAU"
+        alt=""
+      />
+
+      <h1>Order Confirmed</h1>
+      <p style="text-align: center">
+        Your order is confirmed of RS <span id="PriceOfCourse"></span>.You will
+        receive an order confirmation email <span id="emailStudent"></span> Now
+        you are able to access all the videos and movies
+      </p>
+      <button id="DonePurchase" onclick="redirectToHome()">Done</button>
+    </div>
+  </body>
+</html>
+<script src="./assets/js/paymentsuccess.js"></script>

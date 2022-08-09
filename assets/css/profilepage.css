@@ -1,0 +1,613 @@
+body {
+  background-color: #0f0617;
+  margin: 0;
+  font-family: NotoSansRegular, sans-serif;
+}
+* {
+  font-family: sans-serif;
+}
+#userProfileSection {
+  margin-top: 110px;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+}
+#MainDivProfileContainer {
+  width: 88%;
+  height: 100px;
+  border: 1px solid rgb(68, 68, 68);
+  display: flex;
+  gap: 0;
+  height: 650px;
+  justify-content: center;
+  overflow: hidden;
+}
+#firstDivProfileContainer {
+  width: 22%;
+  height: auto;
+  background-color: #1b1223;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#firstDivProfileContainer > button {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  color: #828282;
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+#firstDivProfileContainer > button:hover {
+  border-right: 1px solid white;
+  color: white;
+}
+
+#secondDivProfileContainer {
+  padding: 24px 32px;
+  width: 75%;
+  height: 650px;
+}
+
+#userProfileUpdate,
+#changePassword,
+#userWatchList,
+#userSubscription,
+#userRentals,
+#userTransactions {
+  display: none;
+  width: 100%;
+}
+/* user Profile */
+#userProfileSectionUnder > div {
+  display: flex;
+  flex-direction: column;
+}
+#userProfileSectionUnder > div > div {
+  display: flex;
+  margin-top: 30px;
+}
+#userProfileSectionUnder > div > h1 {
+  width: 85%;
+  color: white;
+  font-size: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(77, 72, 72);
+}
+#userProfileSectionUnder > div > div > div:first-child {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border-radius: 50px;
+  background-color: #8230c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  margin-right: 50px;
+}
+#userProfileSectionUnder > div > div > div:last-child {
+  color: white;
+  padding: 0;
+  cursor: pointer;
+  margin-left: -10px;
+  display: flex;
+  flex-direction: column;
+}
+#userProfileSectionUnder > div > div > div:last-child > h1 {
+  margin: 0;
+}
+#userProfileSectionUnder > div > div > div:last-child > p {
+  color: rgb(185, 177, 177);
+}
+#userProfileSectionUnder > div > div button {
+  background-color: transparent;
+  border: none;
+  color: #a785ff;
+  margin-left: -45px;
+  cursor: pointer;
+}
+#changeItPass {
+  width: 162px;
+  margin-top: 15px;
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px dashed wheat;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* user profile end */
+
+/* input style part */
+
+.fieldPassWordChange {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+  width: 320px;
+  position: relative;
+}
+
+label,
+#NewPasswordCheck,
+#newPassConfirmIn {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+#NewPasswordCheck,
+#newPassConfirmIn {
+  font-size: 15px;
+
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  background-color: rgb(15 6 23);
+  color: white;
+  border-radius: 0;
+  padding: 5px 0;
+  cursor: text;
+}
+
+#newPassConfirmIn:focus,
+#NewPasswordCheck:focus {
+  outline: 0;
+  border-bottom: 1px solid #ad6ce2;
+  width: 500px;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 9px;
+  padding-bottom: 8px;
+}
+
+#newPassConfirmIn:placeholder-shown + label,
+#NewPasswordCheck:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+#newPassConfirmIn::-webkit-#newPassConfirmIn-placeholder,
+#NewPasswordCheck::-webkit-#NewPasswordCheck-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+#newPassConfirmIn:focus::-webkit-#newPassConfirmIn-placeholder,
+#NewPasswordCheck:focus::-webkit-#NewPasswordCheck-placeholder {
+  opacity: 1;
+}
+
+#newPassConfirmIn:not(:placeholder-shown) + label,
+#newPassConfirmIn:focus + label,
+#NewPasswordCheck:not(:placeholder-shown) + label,
+#NewPasswordCheck:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+/* input style part end */
+.show {
+  width: 0;
+  height: 0;
+  align-self: flex-end;
+  margin-right: 35px;
+  z-index: 1;
+  cursor: pointer;
+}
+.eye {
+  width: 20px;
+
+  padding: 20px 0;
+  margin-left: 180px;
+  cursor: pointer;
+  display: none;
+}
+/* change password */
+#changePassword h1:first-child {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(77, 72, 72);
+}
+#changePassword h1:nth-child(2) {
+  color: white;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+#passUpdatebtnContainer > button:first-child {
+  margin-top: 30px;
+  margin-right: 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+#passUpdatebtnContainer > button:first-child:hover {
+  background-color: #8230c6;
+  color: white;
+  border: none;
+}
+#updateUserPassBTN {
+  border-radius: 5px;
+  padding: 15px 50px;
+  margin-top: 30px;
+  margin-right: 15px;
+  background-color: transparent;
+  color: hsla(0, 0%, 100%, 0.5);
+  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  cursor: not-allowed;
+}
+/* change password */
+/* Edit User Profile Part  */
+#changePassword > div > h1:first-child,
+#userProfileUpdate > div > h1,
+#userWatchList > div > h1,
+#userSubscription > div > h1,
+#userRentals > div > h1,
+#userTransactions > div > h1 {
+  color: white;
+  font-size: 30px;
+  width: 85%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(77, 72, 72);
+}
+#genderSelectTA {
+  display: flex;
+  flex-direction: column;
+}
+#genderSelectTA > label {
+  margin-bottom: -5px;
+  background-color: #0f0617;
+  z-index: 1;
+  width: 10px;
+}
+#genderSelectTA > select {
+  width: 440px;
+  background-color: #0f0617;
+  border: 1px solid white;
+  height: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+}
+
+#ProfileUpdateBtnContainer > button:first-child:hover {
+  background-color: #8230c6;
+  color: white;
+  border: none;
+}
+#ProfileUpdateBtnContainer > button:first-child {
+  margin-top: 30px;
+  margin-right: 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+#UpdateJsonProfileUser {
+  border-radius: 5px;
+  padding: 15px 50px;
+  margin-top: 30px;
+  margin-right: 15px;
+  background-color: #8230c6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* input style part */
+
+.fieldPassWordChange {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+  width: 320px;
+  position: relative;
+}
+
+label,
+#NameUserUpdate,
+#emailUserUpdate,
+#NumberUserUpdate,
+#DOBUserUpdate {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+#NameUserUpdate,
+#emailUserUpdate,
+#NumberUserUpdate,
+#DOBUserUpdate {
+  font-size: 20px;
+  height: 50px;
+  width: 400px;
+  border: 0;
+
+  border: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  background-color: rgb(15 6 23);
+  color: white;
+  border-radius: 8px;
+  padding: 0 20px;
+  cursor: text;
+}
+
+#NameUserUpdate:focus,
+#emailUserUpdate:focus,
+#NumberUserUpdate:focus,
+#DOBUserUpdate:focus {
+  outline: 0;
+  border: 1px solid #ad6ce2;
+}
+
+#userProfileUpdate label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 13px;
+  margin-left: 20px;
+  padding: 0 5px;
+  width: 125px;
+}
+
+#NameUserUpdate:placeholder-shown + label,
+#emailUserUpdate:placeholder-shown + label,
+#NumberUserUpdate:placeholder-shown + label,
+#DOBUserUpdate:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1);
+}
+
+#NameUserUpdate::-webkit-#NameUserUpdate-placeholder,
+#emailUserUpdate::-webkit-#emailUserUpdate-placeholder,
+#NumberUserUpdate::-webkit-#NumberUserUpdate-placeholder,
+#DOBUserUpdate::-webkit-#DOBUserUpdate-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+#NameUserUpdate:focus::-webkit-#NameUserUpdate-placeholder,
+#emailUserUpdate:focus::-webkit-#emailUserUpdate-placeholder,
+#NumberUserUpdate:focus::-webkit-#NumberUserUpdate-placeholder,
+#DOBUserUpdate:focus::-webkit-#DOBUserUpdate-placeholder {
+  opacity: 1;
+}
+
+#NameUserUpdate:not(:placeholder-shown) + label,
+#NameUserUpdate:focus + label,
+#emailUserUpdate:not(:placeholder-shown) + label,
+#emailUserUpdate:focus + label,
+#NumberUserUpdate:not(:placeholder-shown) + label,
+#NumberUserUpdate:focus + label,
+#DOBUserUpdate:not(:placeholder-shown) + label,
+#DOBUserUpdate:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  margin-bottom: -8px;
+  background-color: #0f0617;
+}
+/* input style part end */
+/* Edit User Profile Part end */
+.displeyErrorIMG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #14071f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(71, 69, 69);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+#RentalsPurchased699 {
+  width: 100%;
+}
+#MyWatchListDisplay,
+#imgOfERRORmyWatchlist {
+  display: none;
+}
+#appendWatchList {
+  width: 80%;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+}
+#appendWatchList > div {
+  height: 85px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#appendWatchList > div > div {
+  overflow: hidden;
+  width: 44%;
+  border-radius: 8px;
+}
+
+#appendWatchList > div img:hover {
+  transform: scale(1.08);
+}
+#appendWatchList > div img {
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+#appendWatchList > div h3 {
+  color: white;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+#WatchListWatch {
+  background-color: green;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: 25px;
+}
+#watchListRemove {
+  background-color: crimson;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+#RentalsPurchased699 > div,
+#RentalsPurchased499 > div {
+  padding: 25px 3%;
+  width: 80%;
+  background-color: black;
+  color: white;
+
+  box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#RentalsPurchased699 > div > div,
+#RentalsPurchased499 > div > div {
+  display: flex;
+  align-items: center;
+}
+#RentalsPurchased699 > div > div > div h3,
+#RentalsPurchased499 > div > div > div h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+#RentalsPurchased699 > div > div p,
+#RentalsPurchased499 > div > div p {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+#crownOfKing {
+  font-size: 25px;
+
+  background-color: white;
+  padding: 5px;
+  border-radius: 54px;
+  margin-right: 20px;
+  border: 1px solid gray;
+  color: rgb(255 0 145);
+}
+#PriceDivTOP {
+  font-size: 20px;
+  margin-right: 30px;
+  font-weight: 600;
+}
+
+#informationDiv p,
+#informationDiv2 p {
+  position: relative;
+  margin-top: 5px;
+}
+#informationDiv h2,
+#informationDiv2 h2 {
+  margin-top: -30px;
+}
+#informationDiv i,
+#informationDiv2 i {
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  cursor: pointer;
+}
+#informationDiv,
+#informationDiv2 {
+  background-color: rgba(250, 250, 250, 0.658);
+  width: 80%;
+  height: 250px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://i.ytimg.com/vi/xF3vC1aKOLU/maxresdefault.jpg");
+  background-size: 100%;
+  margin: auto;
+  margin-left: 0px;
+  color: white;
+  overflow: hidden;
+  padding: 50px 31px;
+  display: none;
+}
+#informationDiv > div > h2,
+#informationDiv2 > div > h2 {
+  color: #333;
+  font-size: 20px;
+  margin: 0;
+}
+#informationDiv span:first-child,
+#informationDiv2 span:first-child {
+  margin-right: 5px;
+}
+#informationDiv span:not(:first-child),
+#informationDiv2 span:not(:first-child) {
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px dashed gray;
+  pointer-events: all;
+  cursor: pointer;
+}

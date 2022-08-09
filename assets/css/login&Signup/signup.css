@@ -1,0 +1,228 @@
+body {
+  background-color: rgb(15 6 23);
+  margin: 0;
+  font-family: NotoSansRegular, sans-serif;
+}
+#returnHome {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.5);
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+#loginSectionAK {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+#loginDiv {
+  width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  padding: 70px 0 0;
+}
+#loginDiv > div:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  height: 42px;
+  width: 360px;
+  margin: 0px 0 -30px 0;
+  padding: 10px 0 20px;
+  text-align: center;
+}
+#loginDiv > div:nth-child(2) {
+  color: #cfc3ca;
+  font-size: 15px;
+  margin: 0 20px 30px;
+  padding: 10px 0 40px;
+  font-weight: 400;
+  height: 62px;
+  width: 360px;
+  text-align: center;
+}
+#loginDiv > div:nth-child(3) > button {
+  margin-top: -50px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  gap: 10px;
+  border-radius: 10px;
+  color: #d6006b;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.orSpan {
+  padding: 6px 10px;
+  background-color: rgb(29 21 37);
+  border-radius: 20px;
+  margin: 24px;
+}
+
+/* input style part */
+
+.fieldLoginInputPart {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+  width: 320px;
+  position: relative;
+}
+#countrySelectTagNumber {
+  position: absolute;
+  bottom: 5px;
+}
+label,
+#InputMobileOrEmialSignIn,
+#OTPofNumber {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+#InputMobileOrEmialSignIn,
+#OTPofNumber {
+  font-size: 15px;
+
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  background-color: rgb(15 6 23);
+  color: white;
+  border-radius: 0;
+  padding: 5px 0;
+  cursor: text;
+}
+
+#InputMobileOrEmialSignIn:focus,
+#OTPofNumber:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 9px;
+  padding-bottom: 8px;
+}
+
+#InputMobileOrEmialSignIn:placeholder-shown + label,
+#OTPofNumber:placeholder-shown + label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+#InputMobileOrEmialSignIn::-webkit-#InputMobileOrEmialSignIn-placeholder,
+#OTPofNumber::-webkit-#OTPofNumber-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+#InputMobileOrEmialSignIn:focus::-webkit-#InputMobileOrEmialSignIn-placeholder,
+#OTPofNumber:focus::-webkit-#OTPofNumber-placeholder {
+  opacity: 1;
+}
+
+#InputMobileOrEmialSignIn:not(:placeholder-shown) + label,
+#InputMobileOrEmialSignIn:focus + label,
+#OTPofNumber:not(:placeholder-shown) + label,
+#OTPofNumber:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+/* input style part end */
+
+#otpDivInput {
+  display: none;
+}
+#terms_conditionSignUp {
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 15px 30px;
+}
+#terms_conditionSignUp > a {
+  text-decoration: none;
+  color: #a785ff;
+}
+#LoginBTNUser {
+  width: 340px;
+  height: 48px;
+  cursor: not-allowed;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0 20px;
+  background-color: transparent;
+  color: #ffffff80;
+  font-size: 14px;
+  border: 1px solid #ffffff80;
+}
+#gotoSignUpPage {
+  margin-top: 20px;
+  font-size: 12px;
+}
+#gotoSignUpPage > a {
+  text-decoration: none;
+  color: #a785ff;
+}
+#countrySelectTagNumber {
+  display: none;
+  background-color: rgb(15 6 23);
+  color: white;
+  border: none;
+  outline: none;
+  width: 45px;
+  margin-top: 5px;
+}
+.show {
+  width: 0;
+  height: 0;
+  align-self: flex-end;
+  margin-right: 35px;
+  z-index: 1;
+  cursor: pointer;
+}
+.eye {
+  width: 20px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #14071f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(71, 69, 69);
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}

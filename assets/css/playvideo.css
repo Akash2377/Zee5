@@ -1,0 +1,219 @@
+#middle_play_video {
+  width: 90%;
+  padding: 0 1% 0 5%;
+  margin-top: 100px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+#PlayVideoPart {
+  width: 60%;
+}
+#PlayVideoPart iframe {
+  width: 100%;
+  height: 400px;
+}
+#mainDiv2 {
+  width: 50%;
+  height: 800px;
+}
+#mainDiv2 > h1 {
+  color: white;
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+}
+#More-Page-Content-IMG {
+  display: grid;
+  height: 800px;
+  overflow: scroll;
+  overflow-x: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 10px 2%;
+}
+#More-Page-Content > h1 {
+  margin: 50px 0;
+  color: white;
+}
+#More-Page-Content-IMG > div {
+  height: 125px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid gray;
+  transition: all 0.5s ease-in-out;
+  background-color: rgb(15 6 23);
+}
+
+#More-Page-Content-IMG > div > div {
+  position: absolute;
+  bottom: 0;
+  margin-top: 2px;
+  background-color: #0f0617da;
+  background-image: linear-gradient(
+    rgba(238, 226, 226, 0),
+    rgba(109, 99, 99, 0.466),
+    rgba(35, 15, 189, 0.651)
+  );
+  border-radius: 0 0 10px 10px;
+  color: black;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
+#More-Page-Content-IMG > div > div > button:hover {
+  background-color: #8230c6;
+  border: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  color: white;
+}
+#More-Page-Content-IMG > div:hover {
+  transform: scale(1.09, 1.09);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  z-index: 10;
+}
+#More-Page-Content-IMG img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+#More-Page-Content-IMG > div > div > h4 {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 3px;
+}
+#More-Page-Content-IMG > div > div > p {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(202, 186, 186);
+}
+#More-Page-Content-IMG > div > div > button {
+  width: 100px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: black;
+}
+@media all and (min-width: 381px) and (max-width: 800px) {
+  #More-Page-Content-IMG {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 35px;
+  }
+  #More-Page-Content-IMG > div {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+  }
+}
+@media all and (min-width: 50px) and (max-width: 380px) {
+  #More-Page-Content-IMG {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 35px;
+  }
+  #More-Page-Content-IMG > div {
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+  }
+}
+#buyPlanDiv {
+  margin-top: -5px;
+  width: 100%;
+  background-color: rgb(64 26 76);
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 11px;
+  font-weight: lighter;
+}
+#buyPlanDiv > h1 {
+  font-weight: 100;
+}
+#buyPlanDiv > button {
+  padding: 8px 20px;
+  background-color: #8230c6;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+#buyPlanDiv > button > a {
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+#playvideoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#playvideoDetails > h1 {
+  color: white;
+  font-size: 25px;
+}
+#playvideoDetails > ul {
+  display: flex;
+  gap: 30px;
+  margin-left: -25px;
+  color: #a787af;
+}
+#div_watchlist {
+  display: flex;
+}
+#div_watchlist > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 35px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 40px;
+  background-color: hsl(270deg 33% 9%);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+#div_watchlist > button > div {
+  font-size: 15px;
+}
+#playvideoDetails > h4 > span {
+  color: #a787af;
+  font-size: 15px;
+}
+#playvideoDetails > h4 {
+  font-weight: 100;
+}
+#playvideoDetails > p {
+  color: rgb(141, 128, 128);
+}
+#RemoveFromWatchList {
+  display: none;
+}

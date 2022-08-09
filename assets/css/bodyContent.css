@@ -1,0 +1,231 @@
+.movie-list-wrapper a {
+  text-decoration: none;
+  margin-top: 0px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #0f0617;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerbox {
+  width: 100%;
+  margin: auto;
+
+  position: relative;
+}
+.heading_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
+  margin-top: 30px;
+}
+.heading_top > h3 {
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0px;
+  font-size: 23px;
+}
+.heading_top > p {
+  font-size: 25px;
+  margin-top: 10px;
+  /* background-color: black; */
+}
+.heading_top a {
+  font-weight: bold;
+  color: #6649b0;
+}
+/* ----------------------------------heading End --------------------- */
+
+.cardbox_container,
+.cardbox_container1 {
+  /* border: 1px solid white; */
+  height: 400px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transform: translateX(0);
+  transition: all 0.9s ease-in-out;
+  padding: 0px 10px;
+
+  overflow-y: scroll;
+
+  /* margin: 0px; */
+}
+.cardbox_container::-webkit-scrollbar {
+  width: 0px;
+}
+.cardbox_container1::-webkit-scrollbar {
+  width: 0px;
+}
+
+.cardbox {
+  max-width: 300px;
+  min-width: 210px;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 1%;
+  position: relative;
+  transition: 00.4s;
+  gap: 25px;
+  box-sizing: border-box;
+}
+.cardbox:hover {
+  transform: scale(1.2);
+  border: 9px solid #ffffff;
+  /* border-radius: 5px; */
+  z-index: 1;
+  /* height: 350px; */
+}
+.crownicon {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  background-color: #ffffff;
+  padding: 1% 1.5%;
+  background-color: none;
+  border-radius: 50%;
+}
+.crownicon a {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.crownicon i {
+  color: #ff0066;
+  background-color: #ffffff;
+}
+.cardbox > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.text_content {
+  width: 101%;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  background-color: #ffff;
+  /* padding-bottom: 10px; */
+  /* border-radius: 5px; */
+  padding-left: 2%;
+  display: none;
+  transition: 4.9s;
+
+  /* height: 180px; */
+}
+
+.text_content > h2 {
+  padding: 3px;
+  font-size: 14px;
+  margin: 0px;
+  color: black;
+}
+.cardbox:hover .text_content {
+  display: inherit;
+  /* box-shadow: inset 0 100px 0 0 #ffffff; */
+}
+.text_content > p {
+  /* padding: 1% 1.5%; */
+  font-size: 14px;
+  font-weight: bold;
+}
+.bottom_text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.bottom_text a {
+  border: 1px solid gray;
+  color: black;
+
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  /* font-weight: 600; */
+  font-family: "Noto Sans", sans-serif;
+  margin-right: 10px;
+}
+.bottom_text + p {
+  margin: 0px;
+}
+.bottom_text a:hover {
+  color: #ffffff;
+  background-color: #6646b7;
+}
+
+.bottom_text p {
+  color: black;
+  margin: 0px;
+}
+
+.movie-list-wrapper {
+  padding-left: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.cardbox_container::-webkit-scrollbar {
+  display: none;
+}
+.cardbox_container1::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0;
+}
+.prevForCard,
+.nextForCard {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.preprevForCardv {
+  left: 110px;
+}
+
+.nextForCard {
+  right: 50px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prevForCard:hover,
+.nextForCard:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 381px) and (max-width: 950px) {
+  .containerbox {
+    width: 250%;
+    margin: auto;
+
+    position: relative;
+  }
+  .movie-list-wrapper {
+    width: 250%;
+  }
+}
+@media screen and (min-width: 50px) and (max-width: 380px) {
+  .containerbox {
+    width: 250%;
+    margin: auto;
+
+    position: relative;
+  }
+
+  .movie-list-wrapper {
+    width: 250%;
+  }
+}

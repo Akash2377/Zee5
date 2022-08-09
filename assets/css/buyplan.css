@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#container {
+  width: 100%;
+  position: fixed;
+  margin: 0px;
+  top: 0%;
+
+  background: #0f0617;
+  padding: 8px 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#bg {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  height: 45px;
+  margin-left: 50px;
+  opacity: 100%;
+}
+
+#log:hover {
+  background-color: #fff;
+  color: #0f0617;
+}
+
+#log {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  margin-right: 90px;
+  cursor: pointer;
+  width: 80px;
+  padding: 7px 10px;
+}
+#container + p {
+  color: rgb(255, 255, 255);
+  margin-left: 236px;
+  margin-top: 70px;
+}
+p + h1 {
+  color: #fff;
+  font-size: 28px;
+  margin: 5px 0 5px 235px;
+}
+#box {
+  height: 420px;
+  width: 65%;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+#foot {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin-top: 60px;
+  background: #0f0617;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#foot > div:first-child {
+  text-align: left;
+  padding: 15px;
+}
+#foot > div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+#foot > div > div {
+  margin-top: 2.5px;
+  text-align: center;
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+#box1 p {
+  position: relative;
+  margin-top: 25px;
+}
+#box1 i {
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  cursor: pointer;
+}
+#box1 {
+  background-color: #f5f5f5;
+  width: 95%;
+  height: 100%;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  margin: auto;
+  margin-left: 2px;
+
+  line-height: 22px;
+  overflow: hidden;
+  padding: 50px 30px;
+  border-right: 1px dashed gray;
+}
+#box1 > div > h2 {
+  color: #333;
+  font-size: 20px;
+}
+#box1 span:first-child {
+  margin-right: 5px;
+}
+#box1 span:not(:first-child) {
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px dashed #000;
+  pointer-events: all;
+  cursor: pointer;
+}
+#box2 {
+  cursor: pointer;
+
+  width: 90%;
+  margin-right: 35px;
+  margin-top: 0px;
+
+  border: 1px dashed gray;
+  border-radius: 5px 5px 0 0;
+}
+.priceDivInColor > span {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 9px;
+}
+.priceDivInColor {
+  display: flex;
+}
+.priceDivInColor > s {
+  margin-left: 180px;
+  font-size: 13px;
+}
+#box2 > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+#box3 {
+  background-color: #2f80ed;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  height: 22px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.laptopPara {
+  background: rgb(249 244 247);
+  width: 90%;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 0 0 5px 5px;
+}
+#promocodeValuAcceptorreject {
+  display: none;
+  color: red;
+}
+#ParaOfuserStatus {
+  color: white;
+  font-size: 20px;
+
+  font-weight: 700;
+}
+#box4 {
+  background-color: transparent;
+  border: 0.5px solid rgb(255, 95, 121);
+  color: rgb(255, 95, 121);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px;
+  margin-right: 10px;
+}
+#box5 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 13px;
+}
+input {
+  border-radius: 50%;
+}
+#box7 {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px dashed gray;
+  border-radius: 5px 5px 0 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  height: 50px;
+  margin-top: 15px;
+  padding: 15px;
+  width: 90%;
+}
+#btn {
+  cursor: not-allowed;
+  border: none;
+  border-radius: 8px;
+  background-color: #8230c6;
+  color: #fff;
+  width: 90%;
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+}
+#promocodeInput {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  width: 300px;
+  height: 22px;
+  padding-left: 10px;
+}
+#HavingACode {
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+  margin: 5px 0;
+  margin-left: 90px;
+}
+#CancelPromoCode {
+  cursor: pointer;
+}
+#promocodeDiv {
+  border-radius: 5px;
+  display: flex;
+  display: none;
+
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 5px;
+  width: 90%;
+  margin: 10px 0;
+}
+#logoo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  position: relative;
+}
+i {
+  margin-left: 370px;
+  margin-top: 15px;
+}
+#boxSecondDiv {
+  position: relative;
+  height: 420px;
+  padding-top: 28px;
+}
+#crownOfKing {
+  font-size: 30px;
+  position: absolute;
+  background-color: white;
+  padding: 13px;
+  border-radius: 54px;
+  top: -45px;
+  z-index: 10;
+  right: 30px;
+  color: #b900be;
+}
+#tvIcon1,
+#tvIcon2 {
+  margin: 0;
+  margin-right: 10px;
+}
+/* @media screen and (max-width: 650px) {
+  #box {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media all and (min-width: 381px) and (max-width: 900px) {
+  #foot {
+    display: none;
+  }
+}
+@media all and (min-width: 50px) and (max-width: 380px) {
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+
+  #foot {
+    display: none;
+  }
+  #box {
+    width: 100%;
+    margin-left: 5%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1%;
+    padding-bottom: 2%;
+  }
+  #box1 {
+    width: 80%;
+    font-size: 10px;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #box2 {
+    width: 80%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  #box7 {
+    width: 80%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  #head {
+    display: none;
+  }
+  #headp {
+    margin-right: -100px;
+  }
+
+  #btn {
+    padding: 50px;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+} */

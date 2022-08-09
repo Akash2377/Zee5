@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: none;
+}
+#SliderWindowSection {
+  width: 100%;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.prev {
+  left: 110px;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 110px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.containerSlider {
+  margin: 0 auto;
+  width: 78%;
+  height: 400px;
+}
+.slides {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+.slide {
+  min-width: 100%;
+}
+.slide img {
+  width: 98%;
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+.textandbutton {
+  position: absolute;
+  top: 70%;
+
+  z-index: 2;
+  width: 500px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.textandbutton > h2 {
+  color: white;
+  margin: 0;
+}
+.textandbutton > div {
+  margin-top: 30px;
+}
+.WatchBTN {
+  padding: 8px 13px;
+
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+  margin-top: -90px;
+  width: 120px;
+  transition: all 0.5s ease-in-out;
+}
+.WatchBTN:hover {
+  background-color: white;
+  color: black;
+}
+@media screen and (min-width: 381px) and (max-width: 950px) {
+  .containerSlider {
+    margin: 0 auto;
+    width: 200%;
+    height: 400px;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: 100%;
+  }
+  #SliderWindowSection {
+    width: 250%;
+    margin-top: 100px;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 50px) and (max-width: 380px) {
+  .containerSlider {
+    margin: 0 auto;
+    width: 200%;
+    height: 400px;
+    background-color: blue;
+  }
+  .slide {
+    width: 100%;
+  }
+
+  #SliderWindowSection {
+    width: 250%;
+    margin-top: 100px;
+    overflow: hidden;
+  }
+  .slide img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: 100%;
+  }
+}
