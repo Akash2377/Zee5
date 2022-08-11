@@ -4,7 +4,7 @@ document.getElementById("PriceOfCourse").innerText = price;
 async function redirectToHome() {
   try {
     let keyU = JSON.parse(localStorage.getItem("KeyOfLogin"));
-    let url = `http://localhost:3000/UserLoginDetails/${keyU[1]}`;
+    let url = `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`;
     let res = await fetch(url);
     let data = await res.json();
     console.log(data);

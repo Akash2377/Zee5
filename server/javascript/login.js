@@ -67,7 +67,7 @@ function checkDataWithServerNumber() {
   getDataFromServer();
   async function getDataFromServer() {
     try {
-      let url = "http://localhost:3000/UserLoginDetails";
+      let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
       let res = await fetch(url);
       let data = await res.json();
       checkPhonenumber(data);
@@ -102,7 +102,7 @@ async function loginUserIfOTP() {
   let OTPLocal = localStorage.getItem("OTPNew");
 
   try {
-    let url = "http://localhost:3000/UserLoginDetails";
+    let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
     let res = await fetch(url);
     let data = await res.json();
 
@@ -145,7 +145,7 @@ function checkDataWithServerEmail() {
   getDataFromServer();
   async function getDataFromServer() {
     try {
-      let url = "http://localhost:3000/UserLoginDetails";
+      let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
       let res = await fetch(url);
       let data = await res.json();
       checkemailData(data);

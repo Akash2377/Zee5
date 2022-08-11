@@ -2,7 +2,7 @@ async function checkWatchList(val) {
   try {
     let arr = JSON.parse(localStorage.getItem("KeyOfLogin"));
     let id = arr[1];
-    let url = `http://localhost:3000/UserLoginDetails/${id}`;
+    let url = `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`;
     let res = await fetch(url);
     let data = await res.json();
     data.watchList.forEach((element) => {
@@ -107,7 +107,7 @@ function removeFromWatchList(videoID) {
       var arrOfWatchList;
       let arr = JSON.parse(localStorage.getItem("KeyOfLogin"));
       let id = arr[1];
-      let url = `http://localhost:3000/UserLoginDetails/${id}`;
+      let url = `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`;
       let res = await fetch(url);
       let data = await res.json();
       arrOfWatchList = data.watchList;
@@ -119,13 +119,16 @@ function removeFromWatchList(videoID) {
       // alert("Removed From Watch List");
       swal("Removed From Watch List", "DONE", "success");
       setTimeout(function () {
-        fetch(`http://localhost:3000/UserLoginDetails/${id}`, {
-          method: "PATCH",
-          body: JSON.stringify({
-            watchList: arrOfWatchList,
-          }),
-          headers: { "content-type": "application/json" },
-        });
+        fetch(
+          `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`,
+          {
+            method: "PATCH",
+            body: JSON.stringify({
+              watchList: arrOfWatchList,
+            }),
+            headers: { "content-type": "application/json" },
+          }
+        );
       }, 3000);
     } catch (error) {
       console.log(error);
@@ -144,7 +147,7 @@ function addToWatchList(videoID, videotitle, videourl) {
       var arrOfWatchList;
       let arr = JSON.parse(localStorage.getItem("KeyOfLogin"));
       let id = arr[1];
-      let url = `http://localhost:3000/UserLoginDetails/${id}`;
+      let url = `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`;
       let res = await fetch(url);
       let data = await res.json();
       arrOfWatchList = data.watchList;
@@ -153,13 +156,16 @@ function addToWatchList(videoID, videotitle, videourl) {
       swal("Added video to Watch List", "Done", "success");
       arrOfWatchList.push(objWatchList);
       setTimeout(function () {
-        fetch(`http://localhost:3000/UserLoginDetails/${id}`, {
-          method: "PATCH",
-          body: JSON.stringify({
-            watchList: arrOfWatchList,
-          }),
-          headers: { "content-type": "application/json" },
-        });
+        fetch(
+          `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`,
+          {
+            method: "PATCH",
+            body: JSON.stringify({
+              watchList: arrOfWatchList,
+            }),
+            headers: { "content-type": "application/json" },
+          }
+        );
       }, 3000);
     } catch (error) {
       console.log(error);

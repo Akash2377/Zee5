@@ -1,7 +1,7 @@
 getdataMovies();
 async function getdataMovies() {
   try {
-    let url = "http://localhost:3000/zeeOriginalData";
+    let url = "https://jesonserverforzee5.herokuapp.com/zeeOriginalData";
     let res = await fetch(url);
     let data = await res.json();
     getdataMoviesAppend(data);
@@ -170,7 +170,7 @@ function slideCardBoard3(direction) {
 getdataWebSeries();
 async function getdataWebSeries() {
   try {
-    let url = "http://localhost:3000/webseries";
+    let url = "https://jesonserverforzee5.herokuapp.com/webseries";
     let res = await fetch(url);
     let data = await res.json();
     getdataWebSeriesAppend(data);
@@ -223,7 +223,7 @@ function slideCardBoard4(direction) {
 getDataBojMovies();
 async function getDataBojMovies() {
   try {
-    let url = "http://localhost:3000/bhojpuriData";
+    let url = "https://jesonserverforzee5.herokuapp.com/bhojpuriData";
     let res = await fetch(url);
     let data = await res.json();
     getDataBojMoviesAppend(data);

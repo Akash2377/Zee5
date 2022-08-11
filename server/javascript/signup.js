@@ -37,7 +37,7 @@ function checkDataWithServerNumber() {
   getDataFromServer();
   async function getDataFromServer() {
     try {
-      let url = "http://localhost:3000/UserLoginDetails";
+      let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
       let res = await fetch(url);
       let data = await res.json();
       checkPhonenumber(data);
@@ -75,7 +75,7 @@ function loginUserIfOTP() {
   if (OTP == OTPLocal) {
     swal("SignUp Successfully", "Welcome, Please Login Again", "success");
     setTimeout(function () {
-      fetch("http://localhost:3000/UserLoginDetails", {
+      fetch("https://jesonserverforzee5.herokuapp.com/userloginDetails", {
         method: "POST",
         body: JSON.stringify({
           phone: mobileNumber,
@@ -86,8 +86,10 @@ function loginUserIfOTP() {
         }),
         headers: { "Content-Type": "application/json" },
       });
-      window.open("./login.html", "_self");
-    }, 3000);
+      setTimeout(() => {
+        window.open("./login.html", "_self");
+      }, 2000);
+    }, 2000);
   } else {
     swal("Wrong OTP", "Please Enter valid OTP ", "error");
   }
