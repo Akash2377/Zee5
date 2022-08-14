@@ -453,7 +453,7 @@ We are pursuing a Full Stack Web Development course at Masai school, In Masai sc
 
 
 ## Project link
-> ### •[Zee5](https://animated-cannoli-4ee19c.netlify.app)
+> ### •[Zee5](https://zee5clonemasai.netlify.app)
 
 ## Github link
 > ### •[Zee5](https://github.com/Akash2377/Zee5)
