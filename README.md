@@ -1,3 +1,17 @@
+# [Zee5-Clone](https://zee5clone22.netlify.app/)
+<h2>An Online Food Ordering Web App</h2>
+<h3>Zee5 offers an exhaustive array of content; with 90+ live TV channels and 1.25 lac+ hours of viewing across the languages of English, Hindi, Bengali, Malayalam, Tamil, Telugu, Kannada, Marathi, Oriya, Bhojpuri, Gujarati & Punjabi making it a complete video destination for OTT viewers.</h3>
+<h3>A collaborative project built by 5 Developers within 7 days.</h3>
+<h4>Tech Stack : HTML | CSS | JavaScript | JSON Server</h4>
+<h4>Features : </h4>
+<p>---> Sign Up | Login</p>
+<p>---> Landing Page | Home Page | Movie Page | Profile Page ( Dynamic )</p>
+<p>---> Add Movie in Watch list | Buy </p>
+<p>---> Buy plan | Apply Coupons | Payment</p>
+<p>---> Video Page | Help Center</p>
+<br />
+
+
 ## ** Problem statement**
 <br>
 Our Problem statement is creating a pixel-perfect clone of [Zee5](https://www.zee5.com/). Previously we did a clone of a few web pages but in this problem, we were supposed to make pages dynamic.
