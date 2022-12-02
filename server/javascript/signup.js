@@ -37,7 +37,7 @@ function checkDataWithServerNumber() {
   getDataFromServer();
   async function getDataFromServer() {
     try {
-      let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
+      let url = "https://jesonserver.onrender.com/userloginDetails";
       let res = await fetch(url);
       let data = await res.json();
       checkPhonenumber(data);
@@ -75,7 +75,7 @@ function loginUserIfOTP() {
   if (OTP == OTPLocal) {
     swal("SignUp Successfully", "Welcome, Please Login Again", "success");
     setTimeout(function () {
-      fetch("https://jesonserverforzee5.herokuapp.com/userloginDetails", {
+      fetch("https://jesonserver.onrender.com/userloginDetails", {
         method: "POST",
         body: JSON.stringify({
           phone: mobileNumber,
