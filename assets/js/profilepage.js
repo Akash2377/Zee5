@@ -70,7 +70,7 @@ function onProfileClick() {
   getDataFromServer();
   async function getDataFromServer() {
     try {
-      let url = "https://jesonserverforzee5.herokuapp.com/userloginDetails";
+      let url = "https://jesonserver.onrender.com/userloginDetails";
       let res = await fetch(url);
       let data = await res.json();
       ShowDataOnProfile(data);
@@ -198,16 +198,13 @@ function updatePasswordInJson() {
   // alert("Password Updated Successfully");
   swal("Password Updated Successfully", "DONE", "success");
   setTimeout(function () {
-    fetch(
-      `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`,
-      {
-        method: "PATCH",
-        body: JSON.stringify({
-          password: newPasswordcheck.value,
-        }),
-        headers: { "content-type": "application/json" },
-      }
-    );
+    fetch(`https://jesonserver.onrender.com/userloginDetails/${keyU[1]}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        password: newPasswordcheck.value,
+      }),
+      headers: { "content-type": "application/json" },
+    });
   }, 3000);
 }
 // =============================change password end ====================
@@ -239,19 +236,16 @@ function myFunction2() {
 function UpdateUserProfileInJson() {
   let keyU = JSON.parse(localStorage.getItem("KeyOfLogin"));
   setTimeout(function () {
-    fetch(
-      `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`,
-      {
-        method: "PATCH",
-        body: JSON.stringify({
-          email: document.getElementById("emailUserUpdate").value,
-          name: document.getElementById("NameUserUpdate").value,
-          gender: document.getElementById("selectGender").value,
-          dateOfBirth: document.getElementById("DOBUserUpdate").value,
-        }),
-        headers: { "content-type": "application/json" },
-      }
-    );
+    fetch(`https://jesonserver.onrender.com/userloginDetails/${keyU[1]}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        email: document.getElementById("emailUserUpdate").value,
+        name: document.getElementById("NameUserUpdate").value,
+        gender: document.getElementById("selectGender").value,
+        dateOfBirth: document.getElementById("DOBUserUpdate").value,
+      }),
+      headers: { "content-type": "application/json" },
+    });
   }, 3000);
 
   // alert("Profile Updated Successfully");
@@ -263,7 +257,7 @@ async function checkWatchListData() {
   var keyU = JSON.parse(localStorage.getItem("KeyOfLogin"));
   try {
     let res = await fetch(
-      `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`
+      `https://jesonserver.onrender.com/userloginDetails/${keyU[1]}`
     );
     let data = await res.json();
     displayWatchList(data.watchList);
@@ -309,7 +303,7 @@ function removeWatchList(ele) {
       var arrOfWatchList;
       let arr = JSON.parse(localStorage.getItem("KeyOfLogin"));
       let id = arr[1];
-      let url = `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`;
+      let url = `https://jesonserver.onrender.com/userloginDetails/${id}`;
       let res = await fetch(url);
       let data = await res.json();
       arrOfWatchList = data.watchList;
@@ -320,16 +314,13 @@ function removeWatchList(ele) {
       });
 
       setTimeout(function () {
-        fetch(
-          `https://jesonserverforzee5.herokuapp.com/userloginDetails/${id}`,
-          {
-            method: "PATCH",
-            body: JSON.stringify({
-              watchList: arrOfWatchList,
-            }),
-            headers: { "content-type": "application/json" },
-          }
-        );
+        fetch(`https://jesonserver.onrender.com/userloginDetails/${id}`, {
+          method: "PATCH",
+          body: JSON.stringify({
+            watchList: arrOfWatchList,
+          }),
+          headers: { "content-type": "application/json" },
+        });
       }, 3000);
       // alert("Removed From Watch List");
       swal("Removed From Watch List", "DONE", "success");

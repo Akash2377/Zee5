@@ -39,31 +39,25 @@ function continueIfOTPIs() {
   if (otpEnterd == "3568") {
     if (pricePurchassed == "699" || pricePurchassed == "489") {
       let keyU = JSON.parse(localStorage.getItem("KeyOfLogin"));
-      fetch(
-        `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`,
-        {
-          method: "PATCH",
-          body: JSON.stringify({
-            plan699: true,
-          }),
-          headers: { "content-type": "application/json" },
-        }
-      );
+      fetch(`https://jesonserver.onrender.com/userloginDetails/${keyU[1]}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          plan699: true,
+        }),
+        headers: { "content-type": "application/json" },
+      });
       setTimeout(function () {
         window.open("./paymentsuccessful.html", "_self");
       }, 2000);
     } else {
       let keyU = JSON.parse(localStorage.getItem("KeyOfLogin"));
-      fetch(
-        `https://jesonserverforzee5.herokuapp.com/userloginDetails/${keyU[1]}`,
-        {
-          method: "PATCH",
-          body: JSON.stringify({
-            plan499: true,
-          }),
-          headers: { "content-type": "application/json" },
-        }
-      );
+      fetch(`https://jesonserver.onrender.com/userloginDetails/${keyU[1]}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          plan499: true,
+        }),
+        headers: { "content-type": "application/json" },
+      });
       setTimeout(function () {
         window.open("./paymentsuccessful.html", "_self");
       }, 2000);
